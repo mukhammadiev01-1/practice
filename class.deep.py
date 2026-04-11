@@ -8,11 +8,13 @@ print("===== ENCAPSULATION =====")
 # ENCAPSULATION > public __private _protected
 # comparison magic methods > __init__() __str__() __repr__() __add__() __len__()
 
+
 class Account():
     # state
     description = "The class makes bank accounts"
 
     # constructor
+    # __init__ means initialize, it's a special method that is called when an object is created from the class
     def __init__(self, owner, amount):
         self.__owner = owner
         self.__amount = amount
@@ -29,7 +31,7 @@ class Account():
         print("withdraw:", amount)
         self.__amount -= amount
 
-    @property
+    @property  # getter for __owner private variable and means that we can access the __owner variable outside the class using the holder method
     def holder(self):
         return self.__owner
 
@@ -63,3 +65,19 @@ except Exception as err:
 print("owner before:", my_account.holder)  # state
 my_account.holder = "Martin"  # state
 print("owner after:", my_account.holder)
+
+# "#"is used to define private in Javascript, but in Python we use __ to define private variables and methods.
+#   _ is used to define protected variables and methods, which can be accessed by subclasses but not by other classes.
+
+
+# getter va setter bu yerda __owner private variable uchun ishlatilgan, getter va setter yordamida biz __owner variable ni tashqaridan o'qish va o'zgartirish(setter) imkoniyatiga ega bo'lamiz.
+# class User {
+# constructor(name) {
+#   this.name = name;
+#  }
+# }
+
+# const user = new User("Ali");
+# console.log(user.name);
+
+# user.name = "John";

@@ -19,12 +19,14 @@ class Animal:  # Parent
         print(f"the animal can make voice: {self.voice}")
 
 
-class Dog(Animal):  # Child
+class Dog(Animal):  # Child #dog extends Animal
 
-    def __init__(self, name, sound, voice):
-        self.name = name
+    def __init__(self, name, sound, voice):  # constructor
+        self.name = name  # self instead of this in Javascript, and we use it to refer to the current instance of the class
         self.sound = sound
+        # superning vazifasi > parent classning constructorini chaqirish va unga argumentlarni uzatish
         super().__init__(voice)
+        # bu yerda __init__() methodi parent classda mavjud va u voice argumentini qabul qiladi, shuning uchun biz super().__init__(voice) deb chaqiramiz va voice argumentini uzatamiz
 
     def introduce(self):
         print(f"{self.name} says: {self.sound}-{self.sound}")

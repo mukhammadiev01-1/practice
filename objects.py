@@ -28,6 +28,7 @@ print("result2:", result2)
 
 
 print("===== Error handling system =====")
+# in javascript > const car = {name: "Tayota", year: 2026, electric: true}
 car_dict = dict(name="Tayota", year=2026, electric=True)
 
 try:
@@ -39,7 +40,10 @@ except Exception as err:
 else:
     print("Executed successfully without errors")
 finally:
+    # always executed, even if there is an error or not
     print("Final closing logic")
+
+# {} is used in classes in Javascript, but in Python we use indentation to define the scope of classes, functions, loops, etc.
 
 
 # indentation error > SyntaxError
