@@ -1,8 +1,10 @@
 ''' CLASS
     (1) What is class
     (2) ordinary vs static properties
-    (3) special/magic methods
+    (3) special/magic methods 
 '''
+#magic methods > __init__() __str__() __repr__() __add__() __len__() ...
+#special methods > __new__() __call__() __getitem__() __eq__() ...
 
 print("===== What is class =====")
 # class - blueprint for object creation!
@@ -10,13 +12,11 @@ print("===== What is class =====")
 
 
 class Person():
-
-
     # state
-message = "static state property"
+    message = "static state property"
 
-   # constructor
-   def __init__(self, name, age):
+    # constructor
+    def __init__(self, name, age): #constructor 
         self.name = name
         self.age = age
 
@@ -49,13 +49,13 @@ print("===== ordinary vs static properties =====")
 new_message = Person.message
 print("new_message:", new_message)
 
-# static method
+# static method 
 Person.explain()
 
 
 print("===== special/magic methods  =====")
 # Python's most common special methods are below:
-# __init__ __new__ __str__ __call__ __getitem__ __eq__ __len__ ...
+# __init__ __new__ __str__ __call__ __getitem__ __eq__ __len__ ... 
 
 
 class Car():
@@ -63,7 +63,7 @@ class Car():
     description = "This class makes cars"
 
     # constructor
-    def __new__(cls, *args):
+    def __new__(cls, *args): 
         print("* __new__ *")
         return super().__new__(cls)
 
@@ -93,5 +93,5 @@ my_car.stop_engine()
 print("-----")
 your_car = Car("Tayota", 2026)
 print(your_car)
-response = your_car()  # CALL
+response = your_car() # CALL
 print("response:", response)

@@ -20,7 +20,7 @@ class Account():
         self.__amount = amount
 
     # method
-    def get_balance(self):
+    def get_balance(self): #def ma'nosi define, get_balance esa method nomi
         print(f"the owner {self.__owner} has {self.__amount} usd")
 
     def deposit(self, amount):
@@ -71,13 +71,4 @@ print("owner after:", my_account.holder)
 
 
 # getter va setter bu yerda __owner private variable uchun ishlatilgan, getter va setter yordamida biz __owner variable ni tashqaridan o'qish va o'zgartirish(setter) imkoniyatiga ega bo'lamiz.
-# class User {
-# constructor(name) {
-#   this.name = name;
-#  }
-# }
 
-# const user = new User("Ali");
-# console.log(user.name);
-
-# user.name = "John";
